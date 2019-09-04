@@ -1,0 +1,23 @@
+kubernetes:
+  enabled: true
+  accounts:
+  - name: salesforce-10
+    requiredGroupMembership: []
+    providerVersion: V2
+    permissions: {}
+    dockerRegistries: []
+    configureImagePullSecrets: true
+    cacheThreads: 1
+    namespaces: 
+     - default
+    omitNamespaces: []
+    kinds: []
+    omitKinds: []
+    customResources: []
+    cachingPolicies: []
+    kubeconfigFile: /home/ubuntu/.hal/default/staging/dependencies/1031763043-config
+    checkPermissionsOnStartup: false
+    liveManifestCalls: false
+    oauthScopes: []
+    oAuthScopes: []
+    onlySpinnakerManaged: false
