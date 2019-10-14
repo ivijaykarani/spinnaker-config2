@@ -1,23 +1,58 @@
 kubernetes:
-  enabled: true
-  accounts:
-  - name: salesforce-10
-    requiredGroupMembership: []
-    providerVersion: V2
-    permissions: {}
-    dockerRegistries: []
-    configureImagePullSecrets: true
-    cacheThreads: 1
-    namespaces: 
-     - default
-    omitNamespaces: []
-    kinds: []
-    omitKinds: []
-    customResources: []
-    cachingPolicies: []
-    kubeconfigFile: /home/ubuntu/.hal/default/staging/dependencies/1031763043-config
-    checkPermissionsOnStartup: false
-    liveManifestCalls: false
-    oauthScopes: []
-    oAuthScopes: []
-    onlySpinnakerManaged: false
+    enabled: true
+    accounts:
+    - name: k8s-spinnaker2-v2-account
+      requiredGroupMembership: []
+      providerVersion: V2
+      permissions: {}
+      dockerRegistries: []
+      context: gke_gsf-mgmt-devmvp-spinnaker_us-central1-a_gke-spinnaker-ops-cluster-1
+      configureImagePullSecrets: true
+      cacheThreads: 1
+      namespaces: []
+      omitNamespaces: []
+      kinds: []
+      omitKinds: []
+      customResources: []
+      cachingPolicies: []
+      kubeconfigFile: /opt/spin-vault/config/gsf-mgmt-devmvp-spinnaker-spinnaker-ops-cluster-1.kubeconfig
+      oauthScopes: []
+      oAuthScopes: []
+      onlySpinnakerManaged: false
+    - name: k8s-vijay-v2-account
+      requiredGroupMembership: []
+      providerVersion: V2
+      permissions: {}
+      dockerRegistries: []
+      context: gke_gsf-mgmt-devmvp-spinnaker_us-central1-a_gke-spinnaker-ops-cluster-1
+      configureImagePullSecrets: true
+      cacheThreads: 1
+      namespaces: []
+      omitNamespaces: []
+      kinds: []
+      omitKinds: []
+      customResources: []
+      cachingPolicies: []
+      kubeconfigFile: /opt/spin-vault/config/gsf-mgmt-devmvp-spinnaker-spinnaker-ops-cluster-1.kubeconfig
+      oauthScopes: []
+      oAuthScopes: []
+      onlySpinnakerManaged: false
+    - name: k8s-spinnaker2-v1-account-admin
+      requiredGroupMembership: []
+      providerVersion: V1
+      permissions: {}
+      dockerRegistries:
+      - accountName: gcr
+      namespaces: []
+      context: gke_gsf-mgmt-devmvp-spinnaker_us-central1-a_gke-spinnaker-ops-cluster-1
+      configureImagePullSecrets: true
+      cacheThreads: 1
+      omitNamespaces: []
+      kinds: []
+      omitKinds: []
+      customResources: []
+      cachingPolicies: []
+      kubeconfigFile: /opt/spin-vault/config/gsf-mgmt-devmvp-spinnaker-spinnaker-ops-cluster-1.kubeconfig
+      oauthScopes: []
+      oAuthScopes: []
+      onlySpinnakerManaged: false
